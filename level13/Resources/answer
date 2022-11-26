@@ -1,0 +1,6 @@
+LEVEL13
+ls
+-> level13*
+set breakpoint in getuid
+set eax to 4242
+token: 2A31L79asukciNyi8uppkEuSx

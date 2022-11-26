@@ -1,6 +1,11 @@
 LEVEL13
 ls
--> level13*
-set breakpoint in getuid
-set eax to 4242
+-> level13
+ltrace level13
+gdb level13
+disassemble main
+b *0x0804859a
+run
+set $eax=0x1092
+next
 token: 2A31L79asukciNyi8uppkEuSx

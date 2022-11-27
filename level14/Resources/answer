@@ -1,10 +1,45 @@
-
 LEVEL14:
-flag14 id = 3014;
-set brkpnt in getflag at ptrace
-set brkpnt in getflag in getuid
-set eax to 1
-set eax to 3014
 
-token =  7QiHafiNa3HVozsaXkawuYrTstxbpABHD8CPnHJ
-flag: 7QiHafiNa3HVozsaXkawuYrTstxbpABHD8CPnHJ
+$ gdb /bin/getflag
+(gdb) run
+Starting program: /bin/getflag
+You should not reverse this
+[Inferior 1 (process 3871) exited with code 01]
+Реверс с GDB защищен...
+
+(gdb) disas main
+...
+0x08048989 <+67>:	call   0x8048540 <ptrace@plt>
+...
+0x08048afd <+439>:	call   0x80484b0 <getuid@plt>
+Первый системный вызов это ptrace, именно он блокирует реверс
+
+Обходим ptrace
+
+(gdb) catch syscall ptrace
+(gdb) commands 1
+> set ($eax) = 0
+> continue
+> end
+
+Мы также видим, что он использует getuid
+Необходимо подставить идентификатор flag14
+
+Мы получаем его идентификатор
+
+$ id flag14
+uid=3014(flag14) gid=3014(flag14) groups=3014(flag14),1001(flag)
+
+Изменим возвращаемое значение getuid на флаг14, как и для уровня 13.
+Ставим точку останова после вызова <getuid@plt>
+(gdb) b *main+444
+(gdb) r
+(gdb) set $eax=3014
+(gdb) c
+Continuing.
+Check flag.Here is your token : 7QiHafiNa3HVozsaXkawuYrTstxbpABHD8CPnHJ
+(gdb) q
+level14@SnowCrash:~$ su flag14
+Password:
+Congratulation. Type getflag to get the key and send it to me the owner of this livecd :)
+flag14@SnowCrash:~$
